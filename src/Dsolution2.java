@@ -6,21 +6,21 @@ public class Dsolution2 {
     public static void main(String[] args) {
         int[] arr = new int[11];
 
+
         System.out.println("0부터 100까지 숫자를 넣어주세요");
-        Scanner number = new Scanner(System.in);
-
-
-        for (int i = 0; i < 11; i++) {
-
-            arr[i] = number.nextInt();
-        }
-
+        Scanner sc = new Scanner(System.in);
 
         for (int i = 0; i < arr.length; i++) {
-            System.out.print(Arrays.asList().get(50));
+
+            arr[i] = sc.nextInt();
+        }
+        for (int i = 0; i < arr.length; i++) {
+
+            int index = sc.nextInt();
+
+            System.out.println(index);
 
         }
+
     }
 }
-
-

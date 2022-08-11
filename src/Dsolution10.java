@@ -1,20 +1,33 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Dsolution10 {
     public static void main(String[] args) {
-        int[][] arr = {{1, 1, 1, 1,}, {1, 1, 1, 1}};
-        Scanner sc = new Scanner(System.in);
-        System.out.println("숫자를 입력하시오");
-        int sum = 0;
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int arr[][] =  new int[n][n];
 
-        for (int i = 0; i < 20; i++) {
+        for(int y=0; y<n; y++){
+            arr[y][0] = 1;
+        }
 
+        for(int x=0; x<n; x++){
+            arr[0][x] = 1;
+        }
 
-            {
-
-                sum += i;
-                System.out.println(sum);
+        for(int y=1; y<n; y++){
+            for(int x=1; x<n; x++){
+                arr[y][x] = arr[y-1][x] + arr[y][x-1];
             }
+        }
+
+
+        for(int y=0; y<n; y++){
+            for(int x=0; x<n; x++){
+                System.out.print(arr[y][x] + " ");
+            }
+            System.out.println();
         }
     }
 }

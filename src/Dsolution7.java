@@ -2,36 +2,23 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Dsolution7 {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner num = new Scanner(System.in);
         System.out.print("숫자를 입력해주세요");
 
-        int array[] = {0,10,20,30,40,50,60,70,80,90,100};
+        int number = num.nextInt();
+        int[] text = new int[number];
 
-        int max = 0;
-        int min = 0;
+        for (int i = 0; i < text.length; i++) {
+            text[i] = num.nextInt();
+        }
+            Arrays.sort(text);
 
-        for (int i=0; i<array.length; i++){
-            array[i] =num.nextInt();
-
-            if(max<array[i]){
-                max = array[i];
-
-            }
-
-            if(min>array[i]) {
-                min = array[i];
-            }
-
+            System.out.println(text[0] + " " + text[number-1]);
 
         }
-        System.out.println(min);
-        System.out.println(max);
 
 
     }
-
-
-}
 
 
