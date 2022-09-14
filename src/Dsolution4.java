@@ -15,7 +15,8 @@ public class Dsolution4 {
         for (int i=0; i<arr.length; i++){
             if(arr[i]==30);
 
-            else{ System.out.print(arr[i]+ ",");
+            else{
+                System.out.print(arr[i]+ ",");
 
             }
         }
