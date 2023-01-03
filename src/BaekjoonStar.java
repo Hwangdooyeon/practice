@@ -1,26 +1,17 @@
 import java.util.Scanner;
 
-public class Solution5 {
+public class BaekjoonStar {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int N = sc.nextInt();
+        int T = sc.nextInt();
 
-        for (int i = 1;  i <= N; i++){
-            for (int j = N-(i-1); j>=1; j--){
-
+        for (int i = 1; i <= T; i++) {
+            for (int u = 1; u <= i; u++) {
                 System.out.print("*");
             }
             System.out.print("\n");
+
         }
     }
 }
-
-
-
-
-//****
-//***
-//**
-//*
-

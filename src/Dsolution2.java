@@ -1,26 +1,25 @@
 import java.lang.module.FindException;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class Dsolution2 {
     public static void main(String[] args) {
-        int[] arr = new int[11];
-
-
-        System.out.println("0부터 100까지 숫자를 넣어주세요");
+        int arr[] = new int[11];
         Scanner sc = new Scanner(System.in);
 
-        for (int i = 0; i < arr.length; i++) {
+        for (int i=0; i<arr.length; i++) {
 
             arr[i] = sc.nextInt();
         }
-        for (int i = 0; i < arr.length; i++) {
 
-            int index = sc.nextInt();
-
-            System.out.println(index);
-
+        for (int u=0; u<arr.length; u++){
+            if (arr[u]==50){
+                System.out.println(u);
+            }
         }
-
     }
 }
+
+

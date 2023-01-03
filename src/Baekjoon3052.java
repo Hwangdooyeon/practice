@@ -1,24 +1,21 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Baekjoon3052 {
     public static void main(String[] args) {
         Scanner su = new Scanner(System.in);
-
-        int[] arr = new int[10];
-        int[] num = new int[10];
-
-        for (int i = 0; i < 10; i++) {
-            arr[i] = su.nextInt();
-
-        }
+        List<Integer> number = new ArrayList<>();
+        Set<Integer> answer = new HashSet<>();
 
         for (int i = 0; i < 10; i++) {
 
-            System.out.println(num[i] = arr[i] % 42);
+            number.add(su.nextInt());
+        }
+        for (int i = 0; i < 10; i++) {
+
+          answer.add(number.get(i)%42);
 
 
         }
+        System.out.println(answer.size());
     }
-
 }
-
