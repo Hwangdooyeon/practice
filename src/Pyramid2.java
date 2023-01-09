@@ -1,18 +1,17 @@
 import java.util.Scanner;
 
-public class Pyramid {
-    public static void main(String[] args){
+public class Pyramid2 {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         int star = sc.nextInt();
 
-        for (int i=0; i<star; i++){
-
-            for(int w=0; w <-1*i + star-1; w++){
+        for (int i = 1; i <= star; i++) {
+            for (int w = 0; w < i - 1; w++) {
                 System.out.print(" ");
             }
 
-            for (int w=0; w < 2*i+1; w++){
+            for (int w = 0; w <  i * -2 + (star * 2 + 1); w++) {
                 System.out.print("*");
             }
 
@@ -20,3 +19,4 @@ public class Pyramid {
         }
     }
 }
+/*for (int j= star - (i-1); i>=1; i--)*/
