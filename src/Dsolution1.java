@@ -16,8 +16,6 @@ public class Dsolution1 {
                 if(arr[i] == 40|| arr[i]==50|| arr[i] ==60){
                     System.out.print(arr[i]+", ");
                 }
-
-
         }
     }
 }
