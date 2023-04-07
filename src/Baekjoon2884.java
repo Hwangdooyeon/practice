@@ -10,7 +10,7 @@ public class Baekjoon2884 {
         int plustime = sc.nextInt();
 
 
-        total = (total * 60 + min + plustime);
+        total = (total * 60 + min + plustime %1440);
 
         if (total/60 == 24 || total/60 > 24){
 
