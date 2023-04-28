@@ -1,24 +1,30 @@
 import java.util.Scanner;
+import java.util.Scanner;
 
 public class Baekjoon1978 {
+    final static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
-
-        int N = sc.nextInt();
-        int A = sc.nextInt();
+        int n = sc.nextInt();
+        int number;
         int cnt = 0;
 
-        for (int i = 1; i < A; i++) {
+        for (int i = 0; i < n; i++) {
 
-            if (A / 1 == 1 && A / 1 < 1) {
+            number = sc.nextInt();
 
-                cnt++;
+            for (int x = 2; x <= number; x++) {
 
-
-            }
-            System.out.println(cnt);
+                if (x==number){
+                    cnt++;
+                }
+                if (number % x==0){
+                    break;
+                }
             }
         }
+        System.out.println(cnt);
     }
+}
 
