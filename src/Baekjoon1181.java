@@ -1,20 +1,22 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
 
 public class Baekjoon1181 {
-    final static Scanner sc = new Scanner(System.in);
-    public static void main (String[] args){
+    public static void main (String[] args) throws IOException{
 
-        int n = sc.nextInt();
+        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+
+        int n = Integer.parseInt(bf.readLine());
 
         String arr[] = new String[n];
 
-        sc.nextInt();
-
         for (int i=0; i<n; i++){
 
-            arr[i] = sc.nextLine();
+            arr[i] = bf.readLine();
         }
 
         Arrays.sort(arr, new Comparator<String>() {
@@ -28,12 +30,15 @@ public class Baekjoon1181 {
             }
         });
 
-        System.out.println(arr[0]);
+        StringBuilder sb = new StringBuilder();
+
+        sb.append(arr[0]).append('\n');
 
         for (int i=1; i<n; i++){
             if (!arr[i].equals(arr[i-1])){
-                System.out.println(arr[i]);
+                sb.append(arr[i]).append('\n');
             }
         }
+        System.out.println(sb);
     }
 }
