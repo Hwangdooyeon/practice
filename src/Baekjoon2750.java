@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class Baekjoon2750 {
     final static Scanner sc = new Scanner(System.in);
     public static void main (String[] args) {
-        ArrayList<Integer> list = new ArrayList<>();
         int N = sc.nextInt();
         int [] arr = new int[N];
 
