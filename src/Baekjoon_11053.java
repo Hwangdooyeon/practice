@@ -16,14 +16,18 @@ public class Baekjoon_11053 {
         }
         int answer =1;
         for (int i=0; i<n; i++){
-            for (int j=i; j<n; j++){
-                if (A[i] < A[j]){
-                    dp[j] = Math.max(dp[j], dp[i]+1);
-                   answer = Math.max(answer, dp[j]);
+            for (int j=0; j<i; j++){
 
+                if (A[i] > A[j]){
+                    dp[i] = Math.max(dp[i], dp[j]+1);
+                   answer = Math.max(answer, dp[i]);
                 }
+                //System.out.println("i: " + i + ", j: " + j + ", dp[i]: " + dp[i] + ", dp[j]: " + dp[j]);
+                System.out.printf("i: %d, j: %d, dp[%d]: %d, dp[%d]: %d \n ",i,j,i,dp[i],j,dp[j]);
+
             }
         }
+
         System.out.println(answer);
     }
 }
