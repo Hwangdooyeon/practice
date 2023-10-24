@@ -3,11 +3,10 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Baekjoon {
+    final static Scanner sc = new Scanner(System.in);
     public static void main (String[] args){
-        Scanner sc = new Scanner(System.in);
+
         List<Integer> list = new ArrayList();
-
-
 
         int T = sc.nextInt();
         for (int i = 0; i < T; i++){

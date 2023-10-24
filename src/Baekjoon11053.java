@@ -18,6 +18,8 @@ public class Baekjoon11053 {
             for(int j= i; j<n; j++){
                   if (arr[i] < arr[j]){
                       dt[j] = Math.max(dt[j], dt[i] +1);
+
+                      System.out.println("i: " + i + ", j: " + j + ", dt[i]: " + dt[i] + ", dj[j]: " + dt[j]);
                   }
             }
         }

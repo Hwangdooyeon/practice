@@ -20,9 +20,9 @@ public class Baekjoon1912 {
         for(int i=1; i<n; i++){
 
             dp[i] = Math.max(dt[i], dp[i-1]+dt[i]);
-                answer = Math.max(answer, dp[i]);
-            }
-            System.out.println(answer);
+            answer = Math.max(answer, dp[i]);
         }
+        System.out.println(answer);
     }
+}
 

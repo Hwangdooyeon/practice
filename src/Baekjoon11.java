@@ -1,18 +1,17 @@
 import java.util.Scanner;
 
 public class Baekjoon11 {
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
+    final static Scanner sc = new Scanner(System.in);
 
+    public static void main(String[] args) {
         int T = sc.nextInt();
 
-        for (int i=1; i<=T; i++) {
-            for (int u=T-(i-1); u>=i; u--){
+        for (int i = 0; i < T; i++) {
+            for (int u = 0; u < -1 * i + T; u++) {
                 System.out.print("*");
             }
-            System.out.println("\n");
+            System.out.println();
         }
-
     }
 }
 

@@ -2,33 +2,33 @@ import java.lang.reflect.Array;
 import java.util.*;
 
 public class Baekjoon1182 {
-    public static void main(String args[]){
-        Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt();
-        int S = sc.nextInt();
-        int count = 0;
-        int sum = 0;
-        int arr[] = new int[N];
-
-        for (int i=0; i<N; i++){
-
-            arr[i] = sc.nextInt();
-
-            Arrays.sort(arr);
-
-        }
-        for (int u=0; u<arr.length; u++){
-
-            sum += arr[u];
-
-            sum = sum;
-
+    final static Scanner sc = new Scanner(System.in);
+    static int cnt = 0;
+    static int arr[];
+    static int n,m;
+    private static void process(int depth, int sum,boolean isSelected){
+        if (depth>=n) {
+            if (isSelected) {
+                cnt = (sum == m) ? cnt + 1 : cnt;
             }
-        if (sum==S){
-            count++;
-            }
-        System.out.println(count);
+            return;
         }
+            process(depth+1 ,sum+arr[depth],true);
+            process(depth+1 ,sum,isSelected);
+
     }
 
+    public static void main(String args[]) {
 
+        n = sc.nextInt();
+        m = sc.nextInt();
+        arr = new int[n];
+        for (int i=0; i<n; i++){
+
+            arr[i] = sc.nextInt();
+        }
+        process(0, 0,false);
+
+        System.out.println(cnt);
+    }
+}

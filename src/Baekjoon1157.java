@@ -24,11 +24,6 @@ public class Baekjoon1157 {
                 maxchar = '?';
             }
         }
-
         System.out.println(maxchar);
-
-
-
-
     }
 }

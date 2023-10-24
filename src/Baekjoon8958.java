@@ -1,32 +1,37 @@
 import java.util.Scanner;
 
 public class Baekjoon8958{
+
+    final static Scanner sc =new Scanner(System.in);
     public static void main(String[] args){
 
-        Scanner sc = new Scanner(System.in);
-
         int n = sc.nextInt();
+        int[] result = new int[n];
 
-        for(int i=0; i<n; i++) {
+        sc.nextLine();
 
+        for (int i=0; i<n; i++){
+            String s = sc.nextLine();
             int cnt = 0;
-            int sum = 0;
 
-            String s = sc.next();
+            for (int j=0; j<s.length(); j++){
 
-            for(int j=0; j<s.length(); j++) {
+                if (s.charAt(j)=='O'){
 
-                if (s.charAt(j) == 'o') {
                     cnt++;
-                    sum += cnt;
-                }
 
+                    result[i] += cnt;
+                }
                 else {
                     cnt = 0;
                 }
             }
-
-            System.out.println(sum);
+        }
+        for (int i=0; i<n; i++){
+            System.out.println(result[i]);
         }
     }
 }
+
+
+
